@@ -1,5 +1,5 @@
 evm: main.cpp
-	g++ `pkg-config --cflags --libs opencv` -std=c++11 -o evm *.cpp
+	g++ `pkg-config --cflags --libs opencv` -o evm *.cpp -lboost_program_options-mt
 
 clean:
 	rm -rf evm
