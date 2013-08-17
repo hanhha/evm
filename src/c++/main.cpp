@@ -252,10 +252,14 @@ int main(int argc, char **argv)
             videoOutput << frame;
 
             // Update percentage complete message
-            fprintf(stderr, "Complete: %02.1f %%\r",
-                100.0 * static_cast<float>(frame_num) /
-                        static_cast<float>(num_frames));
+			std::cerr << "Complete: "
+				      << std::setprecision(1) << std::fixed
+				      << 100.0 * static_cast<float>(frame_num) /
+                                 static_cast<float>(num_frames)
+					  << "%\r" << std::flush;
 		}
+
+		std::cerr << std::endl;
 	}
 
 	return EXIT_SUCCESS;
