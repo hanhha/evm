@@ -2,8 +2,6 @@
 
 """
 Eulerian Video Magnification (EVM) Demo
-
-Chris Hiszpanski <chiszp@gmail.com>
 """
 
 import time
